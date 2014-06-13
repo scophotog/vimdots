@@ -33,4 +33,7 @@ git clone https://github.com/Shougo/neosnippet-snippets.git
 git clone https://github.com/peterhoeg/vim-tmux.git
 # vim javascript syntax
 git clone https://github.com/jelera/vim-javascript-syntax.git
+# tagbar
+git clone https://github.com/majutsushi/tagbar.git
 # TODO: Deal with fonts somehow
+

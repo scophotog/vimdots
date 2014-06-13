@@ -50,6 +50,15 @@ execute pathogen#infect()
     set incsearch
     set gdefault
 
+" ctags
+set tags=tags;/
+
+" Tagbar (http://blog.stwrt.ca/2012/10/31/vim-ctags)
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
+
+" http://stackoverflow.com/questions/1551231/highlight-variable-under-cursor-in-vim-like-in-netbeans
+:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+
 " Folding
     set foldmethod=indent           " Fold based on indent
     set foldnestmax=3               " max 3 folds

@@ -57,7 +57,7 @@ set tags=tags;/
 nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " http://stackoverflow.com/questions/1551231/highlight-variable-under-cursor-in-vim-like-in-netbeans
-:autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
+" :autocmd CursorMoved * exe printf('match IncSearch /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 
 " Folding
     set foldmethod=indent           " Fold based on indent
@@ -229,10 +229,19 @@ let g:airline#extensions#tmuxline#enabled = 1
     autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
     autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+    autocmd FileType ruby setlocal list
+    autocmd FileType ruby let g:rubycomplete_buffer_loading = 1
+    autocmd FileType ruby let g:rubycomplete_classes_in_global = 1
+    autocmd FileType ruby compiler ruby
 
     let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets'
 
     if has('conceal')
       set conceallevel=2 concealcursor=i
     endif
+
+    " Run ruby file
+    map <leader>r :!ruby %<cr>
+
 " }

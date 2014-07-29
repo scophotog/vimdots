@@ -35,5 +35,7 @@ git clone https://github.com/peterhoeg/vim-tmux.git
 git clone https://github.com/jelera/vim-javascript-syntax.git
 # tagbar
 git clone https://github.com/majutsushi/tagbar.git
+# Ruby Complete
+git clone https://github.com/vim-scripts/rubycomplete.vim
 # TODO: Deal with fonts somehow
 
